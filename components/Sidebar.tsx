@@ -25,7 +25,7 @@ const Sidebar: React.FC<SidebarProps> = ({children, songs}) =>{
         {   
             icon: HiHome, 
             label:'Home', 
-            active: pathname !== '/search',
+            active: pathname !== '/search' && pathname !== '/create',
             href:'/',
         },
         {   
@@ -33,6 +33,13 @@ const Sidebar: React.FC<SidebarProps> = ({children, songs}) =>{
             label:'Search',
             active: pathname === '/search',
             href:'/search',
+        },
+        // Add the new "Create" option here
+        {
+            icon: IoTerminalSharp, // Assuming you want to use the IoTerminalSharp icon for "Create"
+            label: 'Create',
+            active: pathname === '/create',
+            href: '/create',
         }
     ],[pathname])
 
