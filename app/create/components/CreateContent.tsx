@@ -45,7 +45,7 @@ const CreateContent:React.FC<CreateContentProps> = () =>{
             label: 'Meditation',
             active: pathname === '/meditation',
             href: '/meditation',
-            text:'soundtrack for your workouts',
+            text:'soundtrack for your meditation',
             image:'../images/branding .jpeg'
         },
         {
