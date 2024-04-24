@@ -1,0 +1,7 @@
+.prompt-container {
+    width: 33.33%; /* One third of the container width */
+    background-color: #808080; /* Grey color */
+    padding: 20px; /* Padding for inner spacing */
+    box-sizing: border-box; /* Includes padding in width calculation */
+    height: 300%; /* Full height of the parent container */
+  }

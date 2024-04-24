@@ -1,6 +1,9 @@
 import getSongsByTitle from "@/actions/getSongsByTitle";
 import Header from "@/components/Header";
 import SearchInput from "@/components/SearchInput";
+import PromptDiv from "@/components/PromptDiv";
+import GenerationDiv from "@/components/GenerationDiv";
+import SongDiv from "@/components/SongDiv";
 
 interface InstagramProps{
    
@@ -18,6 +21,16 @@ const InstagramProps = async() =>{
                    
                 </div>
             </Header>
+            <div className="flex p-8 justify-between" style={{ gap: '1rem' }}> {/* Adjusted line */}
+                <PromptDiv 
+                    inputOneTitle="Post caption" 
+                    inputOneSubtitle="Enter the caption for your instagram post here"
+                    inputTwoTitle= "Instagram post"    
+                    inputTwoSubtitle="Upload your instagram post here"
+                />
+                <GenerationDiv/>
+                <SongDiv/>
+            </div>
            
         </div>
     )

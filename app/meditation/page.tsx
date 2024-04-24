@@ -1,6 +1,9 @@
 import getSongsByTitle from "@/actions/getSongsByTitle";
 import Header from "@/components/Header";
 import SearchInput from "@/components/SearchInput";
+import PromptDiv from "@/components/PromptDiv";
+import GenerationDiv from "@/components/GenerationDiv";
+import SongDiv from "@/components/SongDiv";
 
 interface MeditationProps{
    
@@ -18,6 +21,16 @@ const Meditation = async() =>{
                    
                 </div>
             </Header>
+            <div className="flex p-8 justify-between" style={{ gap: '1rem' }}> {/* Adjusted line */}
+                <PromptDiv 
+                    inputOneTitle="Meditation session description" 
+                    inputOneSubtitle="Enter a short description for your brand here"
+                    inputTwoTitle= "Vibes"    
+                    inputTwoSubtitle="Enter any media describing your meditaiton sesion here"
+                />
+                <GenerationDiv/>
+                <SongDiv/>
+            </div>
            
         </div>
     )

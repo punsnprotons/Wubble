@@ -1,6 +1,9 @@
 import getSongsByTitle from "@/actions/getSongsByTitle";
 import Header from "@/components/Header";
 import SearchInput from "@/components/SearchInput";
+import PromptDiv from "@/components/PromptDiv";
+import GenerationDiv from "@/components/GenerationDiv";
+import SongDiv from "@/components/SongDiv";
 
 interface ScriptProps{
    
@@ -18,6 +21,16 @@ const Script = async() =>{
                    
                 </div>
             </Header>
+            <div className="flex p-8 justify-between" style={{ gap: '1rem' }}> {/* Adjusted line */}
+                <PromptDiv 
+                    inputOneTitle="Drama script" 
+                    inputOneSubtitle="Enter your drama script here "
+                    inputTwoTitle= "Film Image"    
+                    inputTwoSubtitle="Enter any media for your film script here"
+                />
+                <GenerationDiv/>
+                <SongDiv/>
+            </div>
            
         </div>
     )

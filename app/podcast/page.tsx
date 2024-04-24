@@ -1,6 +1,9 @@
 import getSongsByTitle from "@/actions/getSongsByTitle";
 import Header from "@/components/Header";
 import SearchInput from "@/components/SearchInput";
+import PromptDiv from "@/components/PromptDiv";
+import GenerationDiv from "@/components/GenerationDiv";
+import SongDiv from "@/components/SongDiv";
 
 interface PodcastProps{
    
@@ -18,6 +21,16 @@ const Podcast = async() =>{
                    
                 </div>
             </Header>
+            <div className="flex p-8 justify-between" style={{ gap: '1rem' }}> {/* Adjusted line */}
+                <PromptDiv 
+                    inputOneTitle="Vlog description" 
+                    inputOneSubtitle="Enter a short description about your vlog here"
+                    inputTwoTitle= "Vlog Media"    
+                    inputTwoSubtitle="Enter breif clips about your vlog here"
+                />
+                <GenerationDiv/>
+                <SongDiv/>
+            </div>
            
         </div>
     )

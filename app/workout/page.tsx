@@ -1,6 +1,9 @@
 import getSongsByTitle from "@/actions/getSongsByTitle";
 import Header from "@/components/Header";
 import SearchInput from "@/components/SearchInput";
+import PromptDiv from "@/components/PromptDiv";
+import GenerationDiv from "@/components/GenerationDiv";
+import SongDiv from "@/components/SongDiv";
 
 interface WorkoutProps{
    
@@ -18,6 +21,16 @@ const Workout = async() =>{
                    
                 </div>
             </Header>
+            <div className="flex p-8 justify-between" style={{ gap: '1rem' }}> {/* Adjusted line */}
+                <PromptDiv 
+                    inputOneTitle="Workout Description" 
+                    inputOneSubtitle="Enter a breif description of your workout session here"
+                    inputTwoTitle= "Workout media"    
+                    inputTwoSubtitle="Enter any media describing your workout here"
+                />
+                <GenerationDiv/>
+                <SongDiv/>
+            </div>
            
         </div>
     )
