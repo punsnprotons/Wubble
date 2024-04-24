@@ -24,7 +24,7 @@ const CreateContent:React.FC<CreateContentProps> = () =>{
             active: pathname === '/branding' ,
             href:'/branding',
             text:'tailored music for your branding videos',
-            image:'../images/branding .jpeg'
+            image:'/images/branding .jpeg'
         },
         {   
             
@@ -32,56 +32,56 @@ const CreateContent:React.FC<CreateContentProps> = () =>{
             active: pathname === '/instagram',
             href:'/instagram',
             text:' music for your instagram posts',
-            image:'../images/branding .jpeg'
+            image:'/images/instapost.jpeg'
         },
         {
             label: 'Workout',
             active: pathname === '/workout',
             href: '/workout',
             text:'soundtrack for your workouts',
-            image:'../images/branding .jpeg'
+            image:'/images/workout.jpeg'
         },
         {
             label: 'Meditation',
             active: pathname === '/meditation',
             href: '/meditation',
             text:'soundtrack for your meditation',
-            image:'../images/branding .jpeg'
+            image:'/images/meditation .avif'
         },
         {
             label: 'Store',
             active: pathname === '/store',
             href: '/store',
             text:'engaging music to play in your store',
-            image:'../images/branding .jpeg'
+            image:'/images/shop.jpeg'
         },
         {
             label: 'Script',
             active: pathname === '/script',
             href: '/script',
             text:'a soundtrack for your film script',
-            image:'../images/branding .jpeg'
+            image:'/images/film .jpeg'
         },
         {
             label: 'Vlog',
             active: pathname === '/vlog',
             href: '/vlog',
             text:'background music for your vlog',
-            image:'../images/branding .jpeg'
+            image:'/images/vlog.jpeg'
         },
         {
             label: 'Game',
             active: pathname === '/game',
             href: '/game',
             text:'soundtrack for your gameplay',
-            image:'../images/branding .jpeg'
+            image:'/images/game.jpeg'
         }, 
         {
             label: 'Podcast',
             active: pathname === '/podcast',
             href: '/podcast',
             text:'background music for your podcasts',
-            image:'../images/branding .jpeg'
+            image:'/images/podcast.png'
         }
     ],[pathname])
        return (
@@ -99,8 +99,6 @@ const CreateContent:React.FC<CreateContentProps> = () =>{
                     {routes.map((item)=>(
                         <Create imageUrl={item.image} text={item.text} key={item.label} label={item.label} href={item.href}/>
                     ))}
-                        
-
                     </div>
                 </div>
             </Header>
